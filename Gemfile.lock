@@ -1,0 +1,18 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.10.1)
+    minitest-assert_errors (0.1.0)
+      minitest
+    rake (12.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest
+  minitest-assert_errors
+  rake
+
+BUNDLED WITH
+   1.11.2
