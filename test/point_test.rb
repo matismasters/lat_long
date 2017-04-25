@@ -1,8 +1,4 @@
 require 'minitest/autorun'
-require 'minitest/assert_errors'
-
-
-require_relative '../lib/dependencies.rb'
 
 class TestPoint < Minitest::Test
   def setup

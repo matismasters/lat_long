@@ -1,5 +1,2 @@
-require "lat_long/version"
-
-module LatLong
-  # Your code goes here...
-end
+require 'lat_long/version'
+require 'lat_long/point'
