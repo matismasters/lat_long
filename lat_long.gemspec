@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Matis Masters"]
   spec.email         = ["matis@craftedcode.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Move Lat, Long, coordinates using distance and direction.}
+  spec.description   = %q{LatLong::Point.new(32.000, -41.000).move(5, :miles, :north) => [lat: 32.333, long: -41.000]}
+  spec.homepage      = "https://github.com/matismasters/lat_long"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
