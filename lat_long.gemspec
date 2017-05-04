@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "lat_long"
   spec.version       = LatLong::VERSION
   spec.authors       = ["Matis Masters"]
-  spec.email         = ["matis@craftedcode.com"]
+  spec.email         = ["me@matis.io"]
 
   spec.summary       = %q{Move Lat, Long, coordinates using distance and direction.}
   spec.description   = %q{LatLong::Point.new(32.000, -41.000).move(5, :miles, :north) => [lat: 32.333, long: -41.000]}
