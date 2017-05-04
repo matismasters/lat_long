@@ -50,12 +50,12 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.11)
-  byebug
+  byebug (~> 9.0)
   lat_long!
   minitest (~> 5.0)
   rake (~> 10.0)
-  reek
-  rubocop
+  reek (~> 4.1)
+  rubocop (~> 0.41)
 
 BUNDLED WITH
    1.11.2
