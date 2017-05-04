@@ -1,22 +1,4 @@
 module LatLong
-  DIRECTION_MULTIPLIERS = {
-    north: [1, 1],
-    north_east: [1, 1],
-    east: [1, 1],
-    south_east: [-1, 1],
-    south: [-1, 1],
-    south_west: [-1, -1],
-    west: [1, -1],
-    north_west: [1, -1],
-  }.freeze
-
-  TO_METERS_MULTIPLIERS = {
-    meters: 1,
-    kilometers: 1000,
-    miles: 0.000621371,
-    feets: 3.28084
-  }.freeze
-
   class Point
     ARGUMENT_ERRORS_TEXT = {
       direction:
@@ -39,8 +21,21 @@ module LatLong
     end
 
     def move(distance, unit, direction)
-      direction = direction_multipliers(direction)
-      distance = distance_in_meters(distance, unit)
+      @direction = direction_multipliers(direction)
+      @distance = distance_in_meters(distance, unit)
+
+      y_distance_to_move_in_meters = @distance * @direction[:y_axis]
+      x_distance_to_move_in_meters = @distance * @direction[:x_axis]
+
+      lat_offset = y_distance_to_move_in_meters / EARTH_RADIUS
+      long_offset = x_distance_to_move_in_meters / (
+        EARTH_RADIUS * Math.cos(Math::PI * @lat/180)
+      )
+
+      new_point_lat = @lat + lat_offset * 180/Math::PI
+      new_point_long = @long + long_offset * 180/Math::PI
+
+      [new_point_lat, new_point_long]
     end
 
     private
