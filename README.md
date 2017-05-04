@@ -1,12 +1,38 @@
 # LatLong
 
-WIP Gem for moving Lat, Long, points based on distance and direction. I expect
-to create a Faker module that enables me to use it during geo location apps
-testing cases such as, `people 400 around the target`, `people north of the target`,
-`people north-west from the target`.
+## short-FAQ
+### What does this gem do?
+
+Move `lat, long` points based on distance and direction.
+
+### What else?
+
+For now it's just that, you can check the [Usage](#usage) part for details
+
+### What is it for?
+
+I developed it, and use it to create fake data for my tests when doing mobile
+apps that depend on location based stuff. Things like `people 500 meters away`,
+`people within a certain radius` and things of the like. I would love to hear
+about it if you find a better use for it.
+
+### IMPORTANT NOTE
+
+```
+There are several ways of calculating distances as geo-coordinates. The different
+approaches vary in accuracy, and are used in different scenarios. This gem uses
+the [Aviators Formula], it is the simplest of them all, but it might have big errors
+when used with distances over 2km. I'm ok with this error range for now.
+```
+
+### Future?
+
+I'm planning on understanding (first things first), and implementing all the other
+formulas, so they can be used when some wants to, or the best more accurate option
+be selected depending on the paramters `lat, long, distance, direction`.
 
 Check [Github Issues](https://github.com/matismasters/lat_long/issues) for backlog
-and progress. (WIP)
+and progress.
 
 ## Installation
 
