@@ -14,7 +14,7 @@ module LatLong
     meters: 1,
     kilometers: 1000,
     miles: 0.000621371,
-    feets: 3.28084
+    feet: 3.28084
   }.freeze
 
   EARTH_RADIUS = 6378137.freeze
