@@ -11,25 +11,27 @@ For now it's just that, you can check the [Usage](#usage) part for details
 
 ### What is it for?
 
-I developed it, and use it to create fake data for my tests when doing mobile
+I developed it, and use it, to create fake data for my tests when doing mobile
 apps that depend on location based stuff. Things like `people 500 meters away`,
-`people within a certain radius` and things of the like. I would love to hear
-about it if you find a better use for it.
+`people within a certain radius`, and similar.
+
+I would love to hear about it if you find a better use for it.
 
 ### IMPORTANT NOTE
 
 ```
-There are several ways of calculating distances as geo-coordinates. The different
+There are several ways of calculating distances using geo-coordinates. The different
 approaches vary in accuracy, and are used in different scenarios. This gem uses
-the [Aviators Formula], it is the simplest of them all, but it might have big errors
-when used with distances over 2km. I'm ok with this error range for now.
+the [Aviation Formula](http://www.edwilliams.org/avform.htm),
+it is the simplest of them all, but it might have big errors
+margins when used with distances over 2km. I'm ok with this for now.
 ```
 
 ### Future?
 
 I'm planning on understanding (first things first), and implementing all the other
-formulas, so they can be used when some wants to, or the best more accurate option
-be selected depending on the paramters `lat, long, distance, direction`.
+formulas, so they can be used when needed, or otherwise having the gem automatically
+pick the more accurate depending on the parameters `lat, long, distance, direction`.
 
 Check [Github Issues](https://github.com/matismasters/lat_long/issues) for backlog
 and progress.
