@@ -1,8 +1,12 @@
 # LatLong
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/lat_long`. To experiment with that code, run `bin/console` for an interactive prompt.
+WIP Gem for moving Lat, Long, points based on distance and direction. I expect
+to create a Faker module that enables me to use it during geo location apps
+testing cases such as, `people 400 around the target`, `people north of the target`,
+`people north-west from the target`.
 
-TODO: Delete this and the text above, and describe your gem
+Check [Github Issues](https://github.com/matismasters/lat_long/issues) for backlog
+and progress. (WIP)
 
 ## Installation
 
@@ -22,7 +26,38 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply tell distance, distance_unit, direction and get a new location hash
+
+```ruby
+
+require 'lat_long'
+
+washington_ave_and_17st_nw = LatLong::Point.new 38.892133, (-77.039498)
+
+new_location = washington_ave_and_17st_nw.move 250, :meters, :north
+
+new_location[:lat]  # 38.892133
+new_location[:long] # -77.033727
+
+```
+
+Valid directions:
+
+- `:west`
+- `:north_west`
+- `:north`
+- `:north_east`
+- `:east`
+- `:south_east`
+- `:south`
+- `:south_west`
+
+Valid distance units:
+
+- `:meters`
+- `:kilometers`
+- `:miles`
+- `:feet`
 
 ## Development
 
@@ -32,10 +67,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/lat_long. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/matismasters/lat_long. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
