@@ -1,6 +1,4 @@
-require 'minitest/autorun'
-
-class TestPoint < Minitest::Test
+class TestPointExceptions < Minitest::Test
   def setup
     @point = LatLong::Point.new (-34.902855), (-56.184383)
   end

@@ -35,7 +35,7 @@ module LatLong
       new_point_lat = @lat + lat_offset * 180/Math::PI
       new_point_long = @long + long_offset * 180/Math::PI
 
-      [new_point_lat, new_point_long]
+      { lat: new_point_lat, long: new_point_long }
     end
 
     private
