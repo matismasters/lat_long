@@ -19,13 +19,11 @@ I would love to hear about it if you find a better use for it.
 
 ### IMPORTANT NOTE
 
-```
 There are several ways of calculating distances using geo-coordinates. The different
 approaches vary in accuracy, and are used in different scenarios. This gem uses
 the [Aviation Formula](http://www.edwilliams.org/avform.htm),
 it is the simplest of them all, but it might have big errors
 margins when used with distances over 2km. I'm ok with this for now.
-```
 
 ### Future?
 
